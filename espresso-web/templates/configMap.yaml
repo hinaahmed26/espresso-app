@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.app_name }}-configmap
+data:
+  REDIS_USER: {{ .Values.redis.REDIS_USER | quote }}
+  HOSTNAME: {{ .Values.redis.HOSTNAME | quote }}
